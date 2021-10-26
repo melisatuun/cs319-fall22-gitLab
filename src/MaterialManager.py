@@ -20,9 +20,7 @@ class MaterialManager:
                 self.carManager.setMaterial(materialType.Carbon)
                 returnText = f"{textBaseForValidMaterial} Carbon."
 
-            case materialType.AlloyX:
-                self.carManager.setMaterial(materialType.AlloyX)
-                returnText = f"{textBaseForValidMaterial} AlloyX."
+    
 
             case _:
                 returnText = "Material selection is invalid."
