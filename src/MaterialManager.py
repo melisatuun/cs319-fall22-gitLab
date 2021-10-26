@@ -9,15 +9,18 @@ class MaterialManager:
 
    def changeMaterial(self, material) -> bool:
         returnText = ""
+        textBaseForValidMaterial = "Material is changed to"
 
         match material:
             case materialType.Titanium:
                 self.carManager.setMaterial(materialType.Titanium)
-                returnText = "Material is changed to Titanium."
+                returnText = f"{textBaseForValidMaterial} Titanium."
 
             case materialType.Carbon:
                 self.carManager.setMaterial(materialType.Carbon)
-                returnText = "Material is changed to Carbon."
+                returnText = f"{textBaseForValidMaterial} Carbon."
+
+    
 
 
             
@@ -38,6 +41,7 @@ class MaterialManager:
        returnValue = False
    finally:
        return returnValue
+
 
 
     def _announceMaterial(self, text: str) -> bool:
