@@ -7,7 +7,7 @@ class MaterialManager:
         self.params = params
         # other configurations
 
-    def changeMaterial(self, material) -> bool:
+   def changeMaterial(self, material) -> bool:
         returnText = ""
         textBaseForValidMaterial = "Material is changed to"
 
@@ -22,12 +22,28 @@ class MaterialManager:
 
     
 
+
+            
+
+
             case _:
                 returnText = "Material selection is invalid."
 
         return self._announceMaterial(returnText)
 
 
+   def _announceMaterial(self, text: str) -> bool:
+   returnValue = False
+   try:
+       returnValue = self.announcer(text)
+   except:
+       print("Announcement of material type is failed.")
+       returnValue = False
+   finally:
+       return returnValue
+
+
 
     def _announceMaterial(self, text: str) -> bool:
         return self.announcer(text)
+
