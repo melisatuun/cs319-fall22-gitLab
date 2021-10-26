@@ -7,7 +7,7 @@ class MaterialManager:
         self.params = params
         # other configurations
 
-    def changeMaterial(self, material) -> bool:
+   def changeMaterial(self, material) -> bool:
         returnText = ""
 
         match material:
@@ -19,7 +19,9 @@ class MaterialManager:
                 self.carManager.setMaterial(materialType.Carbon)
                 returnText = "Material is changed to Carbon."
 
+
             
+
 
             case _:
                 returnText = "Material selection is invalid."
